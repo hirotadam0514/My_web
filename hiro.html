@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hiro's blog</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <style>
+        body{
+            margin:10px 0px 15px 0px;
+            font-family: Arial;
+            background-image:url("https://pbs.twimg.com/media/FAiLEB1VgAEBWWG.png");
+            background-repeat:no-repeat;
+            background-position:center top;
+            background-attachment:fixed;
+            background-size:1600px;
+        }
+
+        h1{
+            text-align:center;
+            background:yellow;
+        }
+
+        h2{
+            margin:10px 1350px 15px 0px;
+            color:white;
+            padding:5px;
+        }
+
+        #me{background:indigo;}
+        #like{background:blue;}
+        #book{background:turquoise;}
+        #game{background:purple;}
+        #anime{background:green;}
+
+        section{
+            margin:20px;
+        }
+
+        .content{
+            display:none;
+            border:double #1ebda0 5px;
+            padding:15px;
+            background:white;
+        }
+
+        button{
+            border:double #a8b01a 5px;
+            padding:8px;
+            margin:10px;
+            width:120px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:yellow;
+        }
+
+        p{
+            text-align:center;
+            font-size:20px;
+        }
+
+        table{
+            width:80%;
+            border-collapse:collapse;
+            margin:auto;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#e3820b;
+            color:white;
+        }
+
+        tr:nth-child(even){background:#f2f2f2;}
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Hiro的部落格</h1>
+
+        <section>
+            <h2 id="me">關於我</h2>
+            <button onclick="toggle('#intro')">點選查看</button>
+            <div id="intro" class="content">
+                <p>大家好！我是Hiro，這裡會分享我的生活與興趣。</p>
+                <p>我喜歡遊戲，也喜歡寫程式！</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="like">我的興趣</h2>
+            <button onclick="toggle('.like')">點選查看</button>
+            <ul class="content like">
+                <li>程式設計</li>
+                <li>閱讀</li>
+                <li>樂高積木</li>
+                <li>電子遊戲</li>
+                <li>看動漫</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="book">喜歡的書籍</h2>
+            <button onclick="toggle('.book')">點選查看</button>
+            <ul class="content book">
+                <li>機動戦士ガンダム - 富野由悠季</li>
+                <li>機動戦士ガンダム 逆襲のシャア - 富野由悠季</li>
+                <li>機動戦士ガンダム 閃光のハサウェイ - 富野由悠季</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="game">喜歡的遊戲</h2>
+            <button onclick="toggle('.game')">點選查看</button>
+            <table class="content game">
+                <tr><th>遊戲名稱</th><th>連結</th></tr>
+                <tr><td>Minecraft</td><td><a href="https://www.minecraft.net/zh-hant" target="_blank">官方網站</a></td></tr>
+                <tr><td>WarThunder</td><td><a href="https://warthunder.com/en" target="_blank">官方網站</a></td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2 id="anime">喜歡的動漫</h2>
+            <button onclick="toggle('.anime')">點選查看</button>
+            <div class="content anime" style="text-align:center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uFbTAk7Jrn0?si=FN1bXuY_PtbwosbV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>關於我轉生成史萊姆這檔事</h3>
+            </div>
+        </section>
+
+        <script>
+            function toggle(target){
+                $(target).slideToggle();
+            }
+        </script>
+
+    </body>
+</html>
